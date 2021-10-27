@@ -1,13 +1,13 @@
-#define M1P1 6
-#define M1P2 7
-#define M2P1 8
-#define M2P2 9
-#define M1s 5
-#define M2s 10
-#define LED1 11
-#define LED2 12
-#define BUZ  2
-char bluetooth;
+#define M1P1 6  //motor1_pin1 => 6
+#define M1P2 7  //motor1_pin2 => 7
+#define M2P1 8  //motor2_pin1 => 8
+#define M2P2 9  //motor2_pin2 => 9
+#define M1s 5 //motor1_speed => 5
+#define M2s 10 //motor2_speed => 10
+#define LED1 11 //set led1 in pin 11 
+#define LED2 12 //set led2 in pin 12 
+#define BUZ  2 //set buzzer in pin 2 
+char bluetooth; 
 void setup() {
   // put your setup code here, to run once:
   pinMode(M1P1,OUTPUT);
@@ -24,7 +24,7 @@ void setup() {
 
 void loop()
   {
-    bluetooth=Serial.read();
+    bluetooth=Serial.read(); //Rx from bluethooth and store in var
     switch(bluetooth)
     {
       case 'F':
